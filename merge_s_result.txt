@@ -1,0 +1,74 @@
+Merge sort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 0.000000 seconds to sort.
+3rd file took 1.000000 seconds to sort.
+4th file took 0.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:0.200000
+-----------------------------------------
+
+Merge sort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 0.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 0.000000 seconds to sort.
+5th file took 1.000000 seconds to sort.
+Average is:0.200000
+-----------------------------------------
+
+Merge sort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 0.000000 seconds to sort.
+3rd file took 1.000000 seconds to sort.
+4th file took 0.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:0.200000
+-----------------------------------------
+Merge sort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 0.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 0.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:0.000000
+-----------------------------------------
+Merge sort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 0.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 0.000000 seconds to sort.
+5th file took 1.000000 seconds to sort.
+Average is:0.200000
+-----------------------------------------
+Merge sort benchmark results:
+1st file took 1.000000 seconds to sort.
+2nd file took 0.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 0.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:0.200000
+-----------------------------------------
+Merge sort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 0.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 0.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:0.000000
+-----------------------------------------
+Merge sort benchmark results:
+1st file took 1.000000 seconds to sort.
+2nd file took 0.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 0.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:0.200000
+-----------------------------------------
+Merge sort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 0.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 0.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:0.000000
+-----------------------------------------
