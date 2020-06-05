@@ -56,3 +56,195 @@ Quicksort benchmark results:
 5th file took 0.000000 seconds to sort.
 Average is:15.800000
 -----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 38.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 63.000000 seconds to sort.
+5th file took 1.000000 seconds to sort.
+Average is:20.400000
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 23.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 53.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:15.200000
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 22.000000 seconds to sort.
+3rd file took 1.000000 seconds to sort.
+4th file took 52.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:15.000000
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 27.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 57.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:16.799999
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 28.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 56.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:16.799999
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 32.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 63.000000 seconds to sort.
+5th file took 1.000000 seconds to sort.
+Average is:19.200001
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 28.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 53.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:16.200001
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 29.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 54.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:16.600000
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 34.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 66.000000 seconds to sort.
+5th file took 1.000000 seconds to sort.
+Average is:20.200001
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 25.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 61.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:17.200001
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 31.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 58.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:17.799999
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 27.000000 seconds to sort.
+3rd file took 1.000000 seconds to sort.
+4th file took 60.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:17.600000
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 27.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 70.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:19.400000
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 27.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 56.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:16.600000
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 32.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 59.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:18.200001
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 30.000000 seconds to sort.
+3rd file took 1.000000 seconds to sort.
+4th file took 62.000000 seconds to sort.
+5th file took 1.000000 seconds to sort.
+Average is:18.799999
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 28.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 57.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:17.000000
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 30.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 55.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:17.000000
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 27.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 55.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:16.400000
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 28.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 55.000000 seconds to sort.
+5th file took 1.000000 seconds to sort.
+Average is:16.799999
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 29.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 53.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:16.400000
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 28.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 61.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:17.799999
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 28.000000 seconds to sort.
+3rd file took 1.000000 seconds to sort.
+4th file took 56.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:17.000000
+-----------------------------------------
+Quicksort benchmark results:
+1st file took 0.000000 seconds to sort.
+2nd file took 31.000000 seconds to sort.
+3rd file took 0.000000 seconds to sort.
+4th file took 57.000000 seconds to sort.
+5th file took 0.000000 seconds to sort.
+Average is:17.600000
+-----------------------------------------

@@ -1,13 +1,16 @@
 #include<stdio.h> 
 #include<stdlib.h> 
 #include <time.h>
+#include <pthread.h>
 const char* filename="first.txt";
 const char* filename2="second.txt";
 const char* filename3="third.txt";
 const char* filename4="fourth.txt";
 const char* filename5="fifth.txt";
-
-
+float result[4];
+float result1[3];
+#define NUM_THREADS     4
+#define NUM_THREAD     3
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ QUICK SORT!!!!! ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -217,19 +220,19 @@ for (i = 0; i < size; i++)
 	return result;
 }
 
-float Benchmark_quick_sort()
+void* Benchmark_quick_sort()
 {
-printf("\nQuicksort: \n");
+//printf("\nQuicksort: \n");
 float first = Benchmark_q_s(filename, 100000);
-printf("1st file took %f seconds to sort.\n",first);
+//printf("1st file took %f seconds to sort.\n",first);
 float second = Benchmark_q_s(filename2, 100000);
-printf("2nd file took %f seconds to sort.\n",second);
+//printf("2nd file took %f seconds to sort.\n",second);
 float third = Benchmark_q_s(filename3, 500000);
-printf("3rd file took %f seconds to sort.\n",third);
+//printf("3rd file took %f seconds to sort.\n",third);
 float fourth = Benchmark_q_s(filename4, 150000);
-printf("4th file took %f seconds to sort.\n",fourth);
+//printf("4th file took %f seconds to sort.\n",fourth);
 float fifth = Benchmark_q_s(filename5, 1000000);
-printf("5th file took %f seconds to sort.\n",fifth);
+//printf("5th file took %f seconds to sort.\n",fifth);
 
 	float r = (first + second + third + fourth + fifth)/(float)5;
 	
@@ -242,8 +245,8 @@ printf("5th file took %f seconds to sort.\n",fifth);
 	fprintf(fptr, "Quicksort benchmark results:\n1st file took %f seconds to sort.\n2nd file took %f seconds to sort.\n3rd file took %f seconds to sort.\n4th file took %f seconds to sort.\n5th file took %f seconds to sort.\nAverage is:%f\n-----------------------------------------\n",first, second, third, fourth, fifth,r); 	 
 	fclose(fptr);
 
-	
-	return r;
+	result[0] = r;
+
 }
 
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ Benchmark shell_sort Function!!!!! ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -269,19 +272,19 @@ for (i = 0; i < size; i++)
 
 	return result;
 }
-float Benchmark_shell_sort()
+void* Benchmark_shell_sort()
 {
-printf("\nShell sort: \n");
+//printf("\nShell sort: \n");
 float first = Benchmark_s_s(filename, 100000);
-printf("1st file took %f seconds to sort.\n",first);
+//printf("1st file took %f seconds to sort.\n",first);
 float second = Benchmark_s_s(filename2, 100000);
-printf("2nd file took %f seconds to sort.\n",second);
+//printf("2nd file took %f seconds to sort.\n",second);
 float third = Benchmark_s_s(filename3, 500000);
-printf("3rd file took %f seconds to sort.\n",third);
+//printf("3rd file took %f seconds to sort.\n",third);
 float fourth = Benchmark_s_s(filename4, 150000);
-printf("4th file took %f seconds to sort.\n",fourth);
+//printf("4th file took %f seconds to sort.\n",fourth);
 float fifth = Benchmark_s_s(filename5, 1000000);
-printf("5th file took %f seconds to sort.\n",fifth);
+//printf("5th file took %f seconds to sort.\n",fifth);
 
 	float r = (first + second + third + fourth + fifth)/(float)5;
 	
@@ -294,7 +297,7 @@ printf("5th file took %f seconds to sort.\n",fifth);
 	fprintf(fptr, "Shell sort benchmark results:\n1st file took %f seconds to sort.\n2nd file took %f seconds to sort.\n3rd file took %f seconds to sort.\n4th file took %f seconds to sort.\n5th file took %f seconds to sort.\nAverage is:%f\n-----------------------------------------\n",first, second, third, fourth, fifth,r); 	 
 	fclose(fptr);
 	
-	return r;
+	result[1] = r;
 }
 
 
@@ -321,19 +324,19 @@ for (i = 0; i < size; i++)
 
 	return result;
 }
-float Benchmark_merge_sort()
+void* Benchmark_merge_sort()
 {
-printf("\nMerge sort: \n");
+//printf("\nMerge sort: \n");
 float first = Benchmark_m_s(filename, 100000);
-printf("1st file took %f seconds to sort.\n",first);
+//printf("1st file took %f seconds to sort.\n",first);
 float second = Benchmark_m_s(filename2, 100000);
-printf("2nd file took %f seconds to sort.\n",second);
+//printf("2nd file took %f seconds to sort.\n",second);
 float third = Benchmark_m_s(filename3, 500000);
-printf("3rd file took %f seconds to sort.\n",third);
+//printf("3rd file took %f seconds to sort.\n",third);
 float fourth = Benchmark_m_s(filename4, 150000);
-printf("4th file took %f seconds to sort.\n",fourth);
+//printf("4th file took %f seconds to sort.\n",fourth);
 float fifth = Benchmark_m_s(filename5, 1000000);
-printf("5th file took %f seconds to sort.\n",fifth);
+//printf("5th file took %f seconds to sort.\n",fifth);
 
 	float r = (first + second + third + fourth + fifth)/(float)5;
 	
@@ -346,7 +349,7 @@ printf("5th file took %f seconds to sort.\n",fifth);
 	fprintf(fptr, "Merge sort benchmark results:\n1st file took %f seconds to sort.\n2nd file took %f seconds to sort.\n3rd file took %f seconds to sort.\n4th file took %f seconds to sort.\n5th file took %f seconds to sort.\nAverage is:%f\n-----------------------------------------\n",first, second, third, fourth, fifth,r); 	 
 	fclose(fptr);
 	
-	return r;
+	result[2] = r;
 }
 
 
@@ -374,19 +377,19 @@ for (i = 0; i < size; i++)
 
 	return result;
 }
-float Benchmark_bubble_sort()
+void* Benchmark_bubble_sort()
 {
-printf("\nBubble sort: \n");
+//printf("\nBubble sort: \n");
 float first = Benchmark_b_s(filename, 100000);
-printf("1st file took %f seconds to sort.\n",first);
+//printf("1st file took %f seconds to sort.\n",first);
 float second = Benchmark_b_s(filename2, 100000);
-printf("2nd file took %f seconds to sort.\n",second);
+//printf("2nd file took %f seconds to sort.\n",second);
 float third = Benchmark_b_s(filename3, 500000);
-printf("3rd file took %f seconds to sort.\n",third);
+//printf("3rd file took %f seconds to sort.\n",third);
 float fourth = Benchmark_b_s(filename4, 150000);
-printf("4th file took %f seconds to sort.\n",fourth);
+//printf("4th file took %f seconds to sort.\n",fourth);
 float fifth = Benchmark_b_s(filename5, 1000000);
-printf("5th file took %f seconds to sort.\n",fifth);
+//printf("5th file took %f seconds to sort.\n",fifth);
 
 	float r = (first + second + third + fourth + fifth)/(float)5;
 	
@@ -399,20 +402,22 @@ printf("5th file took %f seconds to sort.\n",fifth);
 	fprintf(fptr, "Bubble sort benchmark results:\n1st file took %f seconds to sort.\n2nd file took %f seconds to sort.\n3rd file took %f seconds to sort.\n4th file took %f seconds to sort.\n5th file took %f seconds to sort.\nAverage is:%f\n-----------------------------------------\n",first, second, third, fourth, fifth,r); 	 
 	fclose(fptr);
 	
-	return r;
+	result[3] = r;
 }
 
  
 // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ MAIN Function!!!!! ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 
+void* (*ptr[4])() = {Benchmark_quick_sort, Benchmark_shell_sort, Benchmark_merge_sort, Benchmark_bubble_sort};
 
 
-float (*ptr[4])() = {Benchmark_quick_sort, Benchmark_shell_sort, Benchmark_merge_sort, Benchmark_bubble_sort};
+
 
 
 int main() 
 { 
+	
 
 float quick;
 float shell;
@@ -421,18 +426,49 @@ float bubble;
 int best;
 int worst;
 int i;
+int r;
 char answer;
-//Now we call all 4 benchmark functions via pointer which is stored in array
 
-quick = (*ptr[0]) ();
-shell = (*ptr[1]) ();
-merge = (*ptr[2]) ();
-bubble = (*ptr[3]) ();
+/*
+pthread_t threads[NUM_THREADS];
+   int rc;
+   long t;
+   for(t=0; t<NUM_THREADS; t++){
+      printf("In main: creating thread %ld\n", t);
+      rc = pthread_create(&threads[t], NULL, ptr[t], NULL);
+      if (rc){
+         printf("ERROR; return code from pthread_create() is %d\n", rc);
+         exit(-1);
+      }
+	//pthread_join(threads[t],NULL);
+   }
+        
 
-printf("\nQuicksort result: %f.\n",quick);
-printf("\nShell sort result: %f.\n",shell);
-printf("\nMerge sort result: %f.\n",merge);
-printf("\nBubble sort result: %f.\n",bubble);
+	pthread_exit(NULL);
+
+	printf("HELLO");		
+*/	
+
+    pthread_t threads[NUM_THREADS];
+    pthread_create(&threads[0], NULL, ptr[0], NULL);
+    pthread_create(&threads[1], NULL, ptr[1], NULL);
+    pthread_create(&threads[2], NULL, ptr[2], NULL);
+    pthread_create(&threads[3], NULL, ptr[3], NULL);
+    pthread_join(threads[0],NULL);
+    pthread_join(threads[1],NULL);
+    pthread_join(threads[2],NULL);
+    pthread_join(threads[3],NULL);	
+	
+
+quick = result[0];
+shell = result[1];
+merge = result[2];
+bubble = result[3];
+	printf("\nQuicksort result: %f.\n",result[0]);
+	printf("\nShell sort result: %f.\n",result[1]);
+	printf("\nMerge sort result: %f.\n",result[2]);
+	printf("\nBubble sort result: %f.\n",result[3]);	
+	
 
 if((quick<shell) && (quick<merge) && (quick<bubble))
         {printf("\nQuicksort is the best sorting algorithm\n");}
@@ -442,70 +478,134 @@ if((quick<shell) && (quick<merge) && (quick<bubble))
         {printf("\nMerge sort is the best sorting algorithm\n");}
     else if((bubble<shell) && (bubble<merge) && (bubble<quick))
         {printf("\nBubble sort is the best sorting algorithm\n");}
-
-	if((quick>shell) && (quick>merge) && (quick>bubble))
+        
+        
+        else if((bubble==shell))
+        {printf("\nBubble and Shell are best!\n");}
+        else if((bubble==quick))
+        {printf("\nBubble and Quick are best!\n");}
+        else if((bubble==merge))
+        {printf("\nBubble and Merge are best!\n");}
+	else if((shell==merge))
+        {printf("\nMerge and Shell are best!\n");}
+        else if((shell==quick))
+        {printf("\nQuick and Shell are best!\n");}
+        else if((merge==quick))
+        {printf("\nMerge and Quick are best!\n");}
+	
+	
+	
+	
+pthread_t thread[NUM_THREAD];
+if((quick>shell) && (quick>merge) && (quick>bubble))
         {
         printf("\nQuicksort is the worst sorting algorithm\n");
-        ptr[0] = ptr[1]; ptr[1] = ptr[2]; ptr[2] = ptr[3]; ptr[3] = NULL;
-        printf("Do you want to continue? Type y/n\n");
+        ptr[0] = NULL;
+        printf("\nDo you want to continue? Type y/n\n");
         scanf("%s", &answer);
         if(answer == 'y'){
-        shell = (*ptr[0]) ();
-	merge = (*ptr[1]) ();
-	bubble = (*ptr[2]) ();
-	printf("\nShellsort result: %f.\n",shell);
-	printf("\nMerge sort result: %f.\n",merge);
-	printf("\nBubble sort result: %f.\n",bubble);
+        
+    pthread_create(&thread[0], NULL, ptr[1], NULL);
+    pthread_create(&thread[1], NULL, ptr[2], NULL);
+    pthread_create(&thread[2], NULL, ptr[3], NULL);
+    
+    pthread_join(thread[0],NULL);
+    pthread_join(thread[1],NULL);
+    pthread_join(thread[2],NULL);	
+	
+
+
+shell = result[0];
+merge = result[1];
+bubble = result[2];
+
+	printf("\nShell sort result: %f.\n",result[0]);
+	printf("\nMerge sort result: %f.\n",result[1]);
+	printf("\nBubble sort result: %f.\n",result[2]);
         }
         }
     else if((shell>quick) && (shell>merge) && (shell>bubble))
         {
         printf("\nShell sort is the worst sorting algorithm\n");
-        ptr[1] = ptr[2]; ptr[2] = ptr[3]; ptr[3] = NULL;
-        printf("Do you want to continue? Type y/n\n");
+        ptr[1] = NULL;
+        printf("\nDo you want to continue? Type y/n\n");
         scanf("%s", &answer);
         if(answer == 'y'){
-        quick = (*ptr[0]) ();
-	merge = (*ptr[1]) ();
-	bubble = (*ptr[2]) ();
-	printf("\nQuicksort result: %f.\n",quick);
-	printf("\nMerge sort result: %f.\n",merge);
-	printf("\nBubble sort result: %f.\n",bubble);
+        pthread_create(&threads[0], NULL, ptr[0], NULL);
+
+    pthread_create(&threads[1], NULL, ptr[2], NULL);
+    pthread_create(&threads[2], NULL, ptr[3], NULL);
+    pthread_join(threads[0],NULL);
+
+    pthread_join(threads[1],NULL);
+    pthread_join(threads[2],NULL);	
+	
+
+quick = result[0];
+
+merge = result[1];
+bubble = result[2];
+	printf("\nQuicksort result: %f.\n",result[0]);
+
+	printf("\nMerge sort result: %f.\n",result[1]);
+	printf("\nBubble sort result: %f.\n",result[2]);
         }
         
         }
     else if((merge>shell) && (merge>quick) && (merge>bubble))
         {
         printf("\nMerge sort is the worst sorting algorithm\n");
-        ptr[2] = ptr[3]; ptr[3] = NULL;
-        printf("Do you want to continue? Type y/n\n");
+        ptr[2] = NULL;
+        printf("\nDo you want to continue? Type y/n\n");
         scanf("%s", &answer);
         if(answer == 'y'){
-        quick = (*ptr[0]) ();
-	shell = (*ptr[1]) ();
-	bubble = (*ptr[2]) ();
-	printf("\nQuicksort result: %f.\n",quick);
-	printf("\nShell sort result: %f.\n",shell);
-	printf("\nBubble sort result: %f.\n",bubble);
+        pthread_create(&threads[0], NULL, ptr[0], NULL);
+    pthread_create(&threads[1], NULL, ptr[1], NULL);
+
+    pthread_create(&threads[2], NULL, ptr[3], NULL);
+    pthread_join(threads[0],NULL);
+    pthread_join(threads[1],NULL);
+
+    pthread_join(threads[2],NULL);	
+	
+
+quick = result[0];
+shell = result[1];
+
+bubble = result[2];
+	printf("\nQuicksort result: %f.\n",result[0]);
+	printf("\nShell sort result: %f.\n",result[1]);
+
+	printf("\nBubble sort result: %f.\n",result[2]);
         }
         }
     else if((bubble>shell) && (bubble>merge) && (bubble>quick))
         {
         printf("\nBubble sort is the worst sorting algorithm\n");
         ptr[3] = NULL;
-        printf("Do you want to continue? Type y/n\n");
+        printf("\nDo you want to continue? Type y/n\n");
         scanf("%s", &answer);
         if(answer == 'y'){
-        quick = (*ptr[0]) ();
-	shell = (*ptr[1]) ();
-	merge = (*ptr[2]) ();
-	printf("\nQuicksort result: %f.\n",quick);
-	printf("\nShell sort result: %f.\n",shell);
-	printf("\nMerge sort result: %f.\n",merge);
-        }
-        }
+        pthread_create(&threads[0], NULL, ptr[0], NULL);
+    pthread_create(&threads[1], NULL, ptr[1], NULL);
+    pthread_create(&threads[2], NULL, ptr[2], NULL);
 
- 
+    pthread_join(threads[0],NULL);
+    pthread_join(threads[1],NULL);
+    pthread_join(threads[2],NULL);
+	
+	
+
+quick = result[0];
+shell = result[1];
+merge = result[2];
+
+	printf("\nQuicksort result: %f.\n",result[0]);
+	printf("\nShell sort result: %f.\n",result[1]);
+	printf("\nMerge sort result: %f.\n",result[2]);
+
+        }
+        }
 	return 0; 
 } 
 
